@@ -1,9 +1,12 @@
 {
   "name": "web-creator",
   "version": "1.0.0",
+  "homepage": "./",
   "scripts": {
     "dev": "node scripts/build.mjs",
-    "build": "node scripts/build.mjs --production"
+    "build": "node scripts/build.mjs --production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -64,6 +67,7 @@
     "autoprefixer": "^10.4.21",
     "esbuild": "0.25.4",
     "esbuild-style-plugin": "^1.6.3",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.17",
